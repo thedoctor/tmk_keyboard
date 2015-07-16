@@ -90,10 +90,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KEYMAP(  // layer 0 : default
         // left hand
-        EQL, 1,   2,   3,   4,   5,   ESC,
-        TAB, Q,   W,   E,   R,   T,   GRV,
+        EQL, 1,   2,   3,   4,   5,  FN13,
+        TAB, Q,   W,   E,   R,   T,   ESC,
         LALT,A,   S,   D,   F,   G,
-        LSFT,Z,   X,   C,   V,   B,   FN1,
+        LSFT,Z,   X,   C,   V,   B,   GRV,
         LALT,GRV, BSLS,FN5,FN1,
                                       LCTL,HOME,
                                             END,
@@ -114,7 +114,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,F1,  F2,  F3,  F4,  F5,  F11,
         TRNS, FN9,FN10,LBRC,RBRC,TRNS,TRNS,
         TRNS,SCLN,FN11, FN8, FN7, FN6,
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+        TRNS,FN16,FN15,FN14,FN13,TRNS,TRNS,
         TRNS,TRNS,TRNS,TRNS,TRNS,
                                       TRNS,TRNS,
                                            TRNS,
@@ -124,7 +124,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              TRNS,TRNS,TRNS,  UP,TRNS,TRNS,VOLU,
                   TRNS,LEFT,DOWN,RGHT,TRNS,VOLD,
              TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,MPLY,
-                       TRNS,TRNS,TRNS,MPRV,MNXT,
+        TRNS,TRNS,TRNS,MFFD,MRWD,
         TRNS,TRNS,
         TRNS,
         TRNS,TRNS,TRNS
@@ -195,7 +195,12 @@ static const uint16_t PROGMEM fn_actions[] = {
     ACTION_MODS_KEY(MOD_LSFT, KC_LBRC),             // FN9 - {
     ACTION_MODS_KEY(MOD_LSFT, KC_RBRC),             // FN10 - }
     ACTION_MODS_KEY(MOD_LSFT, KC_8),                // FN11 - *
-    ACTION_MODS_KEY(MOD_LSFT, KC_QUOT)              // FN12 - "
+    ACTION_MODS_KEY(MOD_LSFT, KC_QUOT),             // FN12 - "
+    ACTION_MODS_KEY(MOD_LSFT, KC_8),                // FN13 - &
+    ACTION_MODS_KEY(MOD_LSFT, KC_4),                // FN14 - $
+    ACTION_MODS_KEY(MOD_LSFT, KC_2),                // FN15 - @
+    ACTION_MODS_KEY(MOD_LSFT, KC_5)                 // FN16 - %
+
 };
 
 void action_function(keyrecord_t *event, uint8_t id, uint8_t opt)
