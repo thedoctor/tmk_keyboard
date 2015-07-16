@@ -196,7 +196,7 @@ static const uint16_t PROGMEM fn_actions[] = {
     ACTION_MODS_KEY(MOD_LSFT, KC_RBRC),             // FN10 - }
     ACTION_MODS_KEY(MOD_LSFT, KC_8),                // FN11 - *
     ACTION_MODS_KEY(MOD_LSFT, KC_QUOT),             // FN12 - "
-    ACTION_MODS_KEY(MOD_LSFT, KC_8),                // FN13 - &
+    ACTION_MODS_KEY(MOD_LSFT, KC_7),                // FN13 - &
     ACTION_MODS_KEY(MOD_LSFT, KC_4),                // FN14 - $
     ACTION_MODS_KEY(MOD_LSFT, KC_2),                // FN15 - @
     ACTION_MODS_KEY(MOD_LSFT, KC_5)                 // FN16 - %
