@@ -89,45 +89,47 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KEYMAP(  // layer 0 : default
+
         // left hand
-        EQL, 1,   2,   3,   4,   5,  FN13,
-        TAB, Q,   W,   E,   R,   T,   ESC,
-        LALT,A,   S,   D,   F,   G,
-        LSFT,Z,   X,   C,   V,   B,   GRV,
-        LALT,GRV, BSLS,FN5,FN1,
-                                      LCTL,HOME,
-                                            END,
-                                 LCTL,LGUI, FN5,
+        EQL,  1,    2,    3,    4,    5,    CAPS,
+        MINS, Q,    W,    E,    R,    T,    GRV,
+        LALT, A,    S,    D,    F,    G,
+        LSFT, Z,    X,    C,    V,    B,    TAB,
+        LALT, GRV,  BSLS, FN5,  DEL,
+                                            LGUI, LCTL,
+                                                  LALT,
+                                      LALT, FN1,  ESC,
+
         // right hand
-             FN3, 6,   7,   8,   9,   0,   MINS,
-             SCLN,Y,   U,   I,   O,   P,   BSLS,
-                  H,   J,   K,   L,   QUOT, ENT,
-             FN1, N,   M,   COMM,DOT, SLSH,RSFT,
-                       FN1, DOWN,UP,  RGHT,RGUI,
-        RALT, DEL,
+              FN3,  6,    7,    8,    9,    0,    MINS,
+              SCLN, Y,    U,    I,    O,    P,    BSLS,
+                    H,    J,    K,    L,    QUOT, ENT,
+              FN1,  N,    M,    COMM, DOT,  SLSH, RSFT,
+                          ENT,  DOWN, UP,   RGHT, RGUI,
+        RALT, SPC,
         PGUP,
-        PGDN,BSPC, SPC
+        PGDN, BSPC, FN1
     ),
 
     KEYMAP(  // layer 1 : function and symbol keys
         // left hand
-        TRNS,F1,  F2,  F3,  F4,  F5,  F11,
-        TRNS, FN9,FN10,LBRC,RBRC,TRNS,TRNS,
-        TRNS,SCLN,FN11, FN8, FN7, FN6,
-        TRNS,FN16,FN15,FN14,FN13,TRNS,TRNS,
-        TRNS,TRNS,TRNS,TRNS,TRNS,
-                                      TRNS,TRNS,
-                                           TRNS,
-                                 TRNS,TRNS,TRNS,
+        TRNS, F1,   F2,   F3,   F4,   F5,   F11,
+        TRNS, FN14, FN15, LBRC, RBRC, TRNS, TRNS,
+        TRNS, SCLN, FN11, FN8,  FN7,  FN6,
+        TRNS, FN18, FN13, FN9,  FN10, TRNS, TRNS,
+        TRNS, TRNS, TRNS, TRNS, TRNS,
+                                            TRNS, TRNS,
+                                                  TRNS,
+                                      TRNS, TRNS, TRNS,
         // right hand
-             F12, F6,  F7,  F8,  F9,  F10, SLEP,
-             TRNS,TRNS,TRNS,  UP,TRNS,TRNS,VOLU,
-                  TRNS,LEFT,DOWN,RGHT,TRNS,VOLD,
-             TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,MPLY,
-        TRNS,TRNS,TRNS,MFFD,MRWD,
-        TRNS,TRNS,
-        TRNS,
-        TRNS,TRNS,TRNS
+             F12,  F6,   F7,   F8,   F9,   F10,  SLEP,
+             TRNS, FN17, UP,   FN16, P7,   P8,   P9,
+                   LEFT, DOWN, RGHT, P4,   P5,   P6,
+             TRNS, TRNS, TRNS, TRNS, P1,   P2,   P3,
+                         TRNS, TRNS, TRNS, P0,   MPLY,
+        TRNS, TRNS,
+        PGDN,
+        TRNS, TRNS, TRNS
     ),
 
     KEYMAP(  // layer 2 : keyboard functions
@@ -199,8 +201,9 @@ static const uint16_t PROGMEM fn_actions[] = {
     ACTION_MODS_KEY(MOD_LSFT, KC_7),                // FN13 - &
     ACTION_MODS_KEY(MOD_LSFT, KC_4),                // FN14 - $
     ACTION_MODS_KEY(MOD_LSFT, KC_2),                // FN15 - @
-    ACTION_MODS_KEY(MOD_LSFT, KC_5)                 // FN16 - %
-
+    ACTION_MODS_KEY(MOD_LSFT, KC_5),                // FN16 - %
+    ACTION_MODS_KEY(MOD_LSFT, KC_6),                // FN17 - ^
+    ACTION_MODS_KEY(MOD_LSFT, KC_3)                 // FN18 - #
 };
 
 void action_function(keyrecord_t *event, uint8_t id, uint8_t opt)
